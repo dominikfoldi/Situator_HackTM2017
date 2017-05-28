@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+    <meta name="viewport" content="width=device-width, maximum-scale=1.0, minimum-scale=1.0, initial-scale=1.0">
+	<!-- Style -->
+    <link rel="stylesheet" type="text/css" href="style/reset.min.css">
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+    <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel = "stylesheet">
+    <script src="https://use.fontawesome.com/a21300352e.js"></script>
+  </head>
+  <body>
+
+    <!-- CONTENT -->
+    <div id="cy"></div>
+
+    <div class="header">
+      <img src="images/asset_2.png" alt="logo" class="logo">
+    </div>
+
+    <div class="menu">
+      <button type="button" name="button" class="addButton fa fa-plus-circle fa-2x" id="addButton"></button>
+      <button type="button" name="button" class="removeButton fa fa-trash-o fa-2x" id="removeButton"></button>
+      <button type="button" name="button" class="connectEdgeButton fa fa-long-arrow-right fa-2x" id="connectEdgeButton"></button>
+      <button type="button" name="button" class="updateButton fa fa-pencil fa-2x" id="updateButton"></button>
+    </div>
+
+    <div id = "dialog" title = "Update">
+        <form action="http://localhost:58168/api/Nodes/" method="put">
+            Text: <input type="text" name="" value="" id="text"><br>
+            URL: <input type="text" name="" value="" id="url"><br>
+            Root: <input type="text" name="" value="" id="isRoot"><br>
+            Video: <input type="button" id="get_file" value="Grab file">
+            <input type="file" id="my_file">
+            <div id="customfileupload"></div><br>
+            <button type="submit" name="button">Save</button>
+        </form>
+    </div>
+
+	<!-- Script -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src = "https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script src="scripts/cytoscape.js"></script>
+	<script src="scripts/functions.js"></script>
+  </body>
+</html>
