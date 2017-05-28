@@ -102,7 +102,7 @@ connectEdgeButton.click(function() {
       var node = e.target;
       node.css('border-style', 'solid');
       node.css('border-width', '2px');
-      node.css('border-color', 'green');
+      node.css('border-color', 'purple');
 
       nodeIndex += 1;
       if(nodeIndex >= 2) {
