@@ -1,6 +1,8 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using System;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Situator.Models;
 
 namespace Situator.Migrations
@@ -40,6 +42,10 @@ namespace Situator.Migrations
                     b.Property<bool>("IsLeaf");
 
                     b.Property<bool>("IsRoot");
+
+                    b.Property<int>("PositionX");
+
+                    b.Property<int>("PositionY");
 
                     b.Property<string>("Text");
 

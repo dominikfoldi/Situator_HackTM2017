@@ -55,7 +55,7 @@ namespace Situator.Controllers
 
             _context.SaveChanges();
 
-            return new NoContentResult();
+            return Ok(filepath);
         }
 
 

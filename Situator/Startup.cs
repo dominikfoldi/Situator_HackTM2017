@@ -53,13 +53,14 @@ namespace Situator
                 app.UseExceptionHandler("/Home/Error");
             }
 
-            app.UseStaticFiles();
+
+            app.UseFileServer();
 
             using (var serviceScope = app.ApplicationServices.GetRequiredService<IServiceScopeFactory>().CreateScope())
             {
-                //serviceScope.ServiceProvider.GetService<SituatorContext>().Database.EnsureDeleted();
-                //serviceScope.ServiceProvider.GetService<SituatorContext>().Database.Migrate();
-                //serviceScope.ServiceProvider.GetService<SituatorContext>().EnsureSeedData();
+                serviceScope.ServiceProvider.GetService<SituatorContext>().Database.EnsureDeleted();
+                serviceScope.ServiceProvider.GetService<SituatorContext>().Database.Migrate();
+                serviceScope.ServiceProvider.GetService<SituatorContext>().EnsureSeedData();
             }
 
             app.UseMvc(routes =>

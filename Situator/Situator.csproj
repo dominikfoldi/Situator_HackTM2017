@@ -6,6 +6,31 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Include="wwwroot\images\a.jpg">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\images\asd.jpg">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\images\asset_2.png">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\images\uides-01.jpg">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\index.html" />
+    <Content Include="wwwroot\scripts\cytoscape.js">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\scripts\cytoscape.min.js" />
+    <Content Include="wwwroot\scripts\functions.js" />
+    <Content Include="wwwroot\style\reset.min.css">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="wwwroot\style\style.css" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="wwwroot\uploads\" />
     <Folder Include="wwwroot\uploads\" />
   </ItemGroup>

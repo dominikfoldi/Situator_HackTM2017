@@ -89,12 +89,21 @@ namespace Situator.Controllers
                 return BadRequest(ModelState);
             }
 
-            _context.Nodes.Add(node);
+            var newNode = new Node
+            {
+                IsLeaf = node.IsLeaf,
+                IsRoot = node.IsRoot,
+                PositionX = node.PositionX,
+                PositionY = node.PositionY,
+                CourseId = 1
+            };
+
+            _context.Nodes.Add(newNode);
             await _context.SaveChangesAsync();
 
             //return _context.Nodes.Where(i => i.Id == node.Id)
 
-            return CreatedAtAction("GetNode", new { id = node.Id }, node);
+            return CreatedAtAction("GetNode", new { id = newNode.Id }, node);
         }
 
         // DELETE: api/Nodes/5

@@ -29,21 +29,21 @@ namespace Situator.Controllers
 
         // GET: api/NodeRelations/5
         [HttpGet("{id}")]
-        public async Task<IActionResult> GetNodeRelation([FromRoute] int id)
+        public IActionResult GetNodeRelation([FromRoute] int id)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            var nodeRelation = await _context.NodeRelations.SingleOrDefaultAsync(m => m.ParentId == id);
+            var nodeRelation = _context.NodeRelations.Include(nr => nr.Parent).Include(nr => nr.Child).Where(m => m.Parent.CourseId == id && m.Child.CourseId == id);
 
             if (nodeRelation == null)
             {
                 return NotFound();
             }
 
-            return Ok(nodeRelation);
+            return Ok(nodeRelation.ToList());
         }
 
         // PUT: api/NodeRelations/5

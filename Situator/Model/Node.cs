@@ -20,6 +20,9 @@ namespace Situator.Model
         public virtual ICollection<NodeRelation> Parents { get; set; }
         public virtual ICollection<NodeRelation> Children { get; set; }
 
-        //TODO: Canvas coorindates X,Y
+        public int PositionX { get; set; }
+
+        public int PositionY { get; set; }
+
     }
 }
