@@ -43,6 +43,7 @@ html, body {
 }
 
 .removeButton {
+  cursor: pointer;
   position: absolute;
   z-index: 8;
   width: 100%;
@@ -56,6 +57,7 @@ html, body {
 }
 
 .connectEdgeButton {
+  cursor: pointer;
   position: absolute;
   z-index: 8;
   width: 100%;
@@ -69,6 +71,7 @@ html, body {
 }
 
 .updateButton {
+  cursor: pointer;
   position: absolute;
   z-index: 8;
   width: 100%;
