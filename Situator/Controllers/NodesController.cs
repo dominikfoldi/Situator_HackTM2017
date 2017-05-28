@@ -92,6 +92,8 @@ namespace Situator.Controllers
             _context.Nodes.Add(node);
             await _context.SaveChangesAsync();
 
+            //return _context.Nodes.Where(i => i.Id == node.Id)
+
             return CreatedAtAction("GetNode", new { id = node.Id }, node);
         }
 
