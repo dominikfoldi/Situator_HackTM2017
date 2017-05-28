@@ -37,27 +37,39 @@ var newNodeIdNum = 1;
 //menu
 var menu = $('.menu');
 //add button
+var addButtonStatus = false;
 var addButton = $('#addButton');
 addButton.css('display','block');
 addButton.click( function() {
-  cy.add([
-    { group: "nodes", data: {
-      id: 'n' + newNodeIdNum,
-      name: 'new_decition'+newNodeIdNum,
-      text: '',
-      url: '',
-      root: '' },
-      position: { x: 300, y: 200 } }
-  ]);
-  ++newNodeIdNum;
+  addButtonStatus = !addButtonStatus;
+  if (addButtonStatus) {
+    addButton.css('background','#ce8445');
+    cy.on('tap', function() {
+        cy.add([
+          { group: "nodes", data: {
+            id: 'n' + newNodeIdNum,
+            name: 'new_decition'+newNodeIdNum,
+            text: '',
+            url: '',
+            root: '' },
+            position: { x: 300, y: 200 } }
+        ]);
+        ++newNodeIdNum;
+    })
+  } else {
+    cy.off('tap');
+    addButton.css('background','#ff7f11');
+  }
 });
+
 //remove button ---------------------------------------------------------
 var removeButton = $('#removeButton');
 removeButton.css('display','block');
 var removeValue = 0;
-var removeButtonStatus = true; //status variable
+var removeButtonStatus = false; //status variable
 removeButton.click(function() {
   removeButton.css('background','#ce8445');
+  removeButtonStatus = !removeButtonStatus;
   if (removeButtonStatus) {
     cy.on('tap', 'node', function(e){
       e.target.remove('node');
@@ -90,7 +102,7 @@ connectEdgeButton.click(function() {
       var node = e.target;
       node.css('border-style', 'solid');
       node.css('border-width', '2px');
-      node.css('border-color', 'green');
+      node.css('border-color', 'purple');
 
       nodeIndex += 1;
       if(nodeIndex >= 2) {
@@ -138,7 +150,6 @@ updateButton.click(function() {
           height: 300
         });
       });
-      document.getElementById('inputId').value = node.data('id');
       document.getElementById('text').value = node.data('text');
       document.getElementById('url').value = node.data('url');
 
