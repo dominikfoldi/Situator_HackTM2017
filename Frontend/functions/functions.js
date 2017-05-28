@@ -73,22 +73,23 @@ removeButton.click(function() {
   if (removeButtonStatus) {
     cy.on('tap', 'node', function(e){
       e.target.remove('node');
-      removeButtonStatus = false;
+      //removeButtonStatus = false;
     });
   } else {
     cy.off('tap');
     removeButton.css('background','#ff7f11');
-    removeButtonStatus = true;
+    //removeButtonStatus = true;
   }
 
 });
 //connectEdgeButton -----------------------------------------------------
-var connectEdgeButtonStatus = true; //status variable
+var connectEdgeButtonStatus = false; //status variable
 var connectEdgeButton = $('#connectEdgeButton');
 connectEdgeButton.css('display','block');
 //CONNECT EDGES
 var newEdgeIdNum = 1;
 connectEdgeButton.click(function() {
+  connectEdgeButtonStatus = !connectEdgeButtonStatus;
   connectEdgeButton.css('background','#ce8445');
   if (connectEdgeButtonStatus) {
 
@@ -120,12 +121,10 @@ connectEdgeButton.click(function() {
         ]);
 
         nodeArray = [];
-        connectEdgeButtonStatus = false;
         node.css('border-width', '0px');
       }
     });
   } else {
-    connectEdgeButtonStatus = true;
     cy.off('tap');
     connectEdgeButton.css('background','#ff7f11');
   }
