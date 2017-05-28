@@ -1,0 +1,9 @@
+C:\Users\Dani\Source\Repos\Situator_HackTM2017\Situator\bin\Debug\netcoreapp1.1\Situator.deps.json
+C:\Users\Dani\Source\Repos\Situator_HackTM2017\Situator\bin\Debug\netcoreapp1.1\Situator.runtimeconfig.json
+C:\Users\Dani\Source\Repos\Situator_HackTM2017\Situator\bin\Debug\netcoreapp1.1\Situator.runtimeconfig.dev.json
+C:\Users\Dani\Source\Repos\Situator_HackTM2017\Situator\bin\Debug\netcoreapp1.1\Situator.dll
+C:\Users\Dani\Source\Repos\Situator_HackTM2017\Situator\bin\Debug\netcoreapp1.1\Situator.pdb
+C:\Users\Dani\Source\Repos\Situator_HackTM2017\Situator\obj\Debug\netcoreapp1.1\Situator.csprojResolveAssemblyReference.cache
+C:\Users\Dani\Source\Repos\Situator_HackTM2017\Situator\obj\Debug\netcoreapp1.1\Situator.AssemblyInfo.cs
+C:\Users\Dani\Source\Repos\Situator_HackTM2017\Situator\obj\Debug\netcoreapp1.1\Situator.dll
+C:\Users\Dani\Source\Repos\Situator_HackTM2017\Situator\obj\Debug\netcoreapp1.1\Situator.pdb
