@@ -83,7 +83,7 @@ removeButton.click(function() {
 
 });
 //connectEdgeButton -----------------------------------------------------
-var connectEdgeButtonStatus = false; //status variable
+var connectEdgeButtonStatus = terv; //status variable
 var connectEdgeButton = $('#connectEdgeButton');
 connectEdgeButton.css('display','block');
 //CONNECT EDGES
